@@ -29,7 +29,7 @@ void CLogReader::Close() const
 
 bool CLogReader::SetFilter(const char *filter)
 {
-	if (strlen(filter) == 0)
+	if (filter == nullptr || strlen(filter) == 0)
 		return false;
 	
 	char *filterCheck = const_cast<char*> (filter);
